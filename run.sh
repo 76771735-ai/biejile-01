@@ -1,3 +1,4 @@
 #!/bin/sh
-# 容器启动脚本（抖音云以 ENTRYPOINT 调用；日志输出到标准输出，平台日志面板可见）
-node index.js
+# 容器启动脚本（抖音云平台固定调用 /opt/application/run.sh）
+cd "$(dirname "$0")"
+exec node index.js
